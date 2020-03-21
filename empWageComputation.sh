@@ -31,12 +31,14 @@ wagesForWorkHours () {
 
 	totalWorkingHours=0
 	wagesTime=0
+	partialWages=0
 	while [ $totalWorkingHours -lt 100  ]
 	do
 		wagesTime=$((wagesTime+wagePerHour))
 		totalWorkingHours=$((totalWorkingHours+1))
 	done
 	echo "Wages for total working time is "$wagesTime
+	echo "Wages for total partial time is "$((wagesTime/2))
 
 }
 
