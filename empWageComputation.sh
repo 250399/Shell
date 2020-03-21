@@ -54,4 +54,7 @@ case $ch in
 	*)echo Invalid choice;;
 esac
 monthlyWages
+
 wagesForWorkHours
+
+
