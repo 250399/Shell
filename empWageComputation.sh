@@ -41,4 +41,18 @@ case $ch in
 esac
 monthlyWages
 
+<<<<<<< HEAD
 
+=======
+totalWorkingHours=0
+totalDays=0
+wagesMonth=0
+wagesTime=0
+while [ $totalWorkingHours -lt 100 -a  $totalDays -lt 20 ]
+do
+	wagesMonth=$((wagesMonth+dailyWage))
+	wagesTime=$((wagesTime+wagePerHour))
+	totalWorkingHours=$((totalWorkingHours+1))
+	totalDays=$((totalDays+1))
+done
+[ $totalDays -eq 20 ] && echo "Wages for total working days is "$wagesMonth || echo "Wages for total working time is "$wagesTime 
