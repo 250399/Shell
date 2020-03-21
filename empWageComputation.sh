@@ -21,6 +21,11 @@ partTimeWage () {
 	echo "Part time wage of "$partTimeEmployee "is" $partTimeWage
 }
 
+monthlyWages () {
+	totalDays=20
+	monthlyWage=$((totalDays*dailyWage))
+	echo "Monthly wage is "$monthlyWage
+}
 isPresent
 dailyWage
 partTimeWage
@@ -32,5 +37,19 @@ case $ch in
 	"2")dailyWage;;
 	"3")partTimeWage;;
 	"4")exit;;
-	"*")echo Invalid choice
+	*)echo Invalid choice;;
 esac
+monthlyWages
+
+totalWorkingHours=0
+totalDays=0
+wagesMonth=0
+wagesTime=0
+while [ $totalWorkingHours -lt 100 -a  $totalDays -lt 20 ]
+do
+	wagesMonth=$((wagesMonth+dailyWage))
+	wagesTime=$((wagesTime+wagePerHour))
+	totalWorkingHours=$((totalWorkingHours+1))
+	totalDays=$((totalDays+1))
+done
+[ $totalDays -eq 20 ] && echo "Wages for total working days "$wagesMonth || echo "Wages for total working time "$wagesTime 
