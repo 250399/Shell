@@ -60,3 +60,13 @@ monthlyWages
 wagesForWorkHours
 
 
+for i in {0..19}
+do
+	arr[$i,0]=$dailyWage
+	arr[$i,1]=$monthlyWage
+done
+
+for i in {0..19}
+do
+	echo "Daily wage: "${arr[$i,0]} "Toral Wage :"${arr[$i,1]}
+done
