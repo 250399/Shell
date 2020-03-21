@@ -4,4 +4,4 @@
 echo "Welcome to Employee Wage Computation Program"
 
 
-t
+[ $((RANDOM%2)) -eq 1 ] && echo Employee Present || echo Employee Absent
