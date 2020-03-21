@@ -71,3 +71,28 @@ do
 	echo "Daily wage: "${arr[$i,0]} "Toral Wage :"${arr[$i,1]}
 done
 
+declare -A array
+for i in {0..19}
+do
+	r=$((RANDOM%3))
+	if [ $r -eq 0 ]
+	then
+		array[$i.0.0]=$i
+		array[$i.1.0]=0
+		array[$i.0.2]=$monthlyWage
+	elif [ $r -eq 1 ]
+	then
+		array[$i.0.0]=$i
+		array[$i.1.0]=$dailyWage
+		array[$i.0.2]=$monthlyWage
+	else
+		array[$i.0.0]=$i
+		array[$i.1.0]=$partTimeWage
+		array[$i.0.2]=$monthlyWage
+	fi
+done
+
+for i in {0..19}
+do
+	echo "Day :"${array[$i.0.0]} "Wage :"${array[$i.1.0]} "Total Wage :"${array[$i.0.2]}
+done
