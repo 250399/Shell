@@ -41,9 +41,7 @@ case $ch in
 esac
 monthlyWages
 
-<<<<<<< HEAD
 
-=======
 totalWorkingHours=0
 totalDays=0
 wagesMonth=0
