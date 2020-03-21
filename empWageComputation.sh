@@ -11,3 +11,9 @@ wagePerHour=20
 fullDayWork=8
 dailyWage=$((wagePerHour*fullDayWork))
 echo "Daily Employee Wage is :"$dailyWage
+
+
+partTimeEmployee=Sam
+partTimeWork=$((fullDayWork/2))
+partTimeWage=$((partTimeWork*wagePerHour))
+echo "Part time wage of "$partTimeEmployee "is" $partTimeWage
