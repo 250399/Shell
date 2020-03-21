@@ -70,3 +70,4 @@ for i in {0..19}
 do
 	echo "Daily wage: "${arr[$i,0]} "Toral Wage :"${arr[$i,1]}
 done
+
