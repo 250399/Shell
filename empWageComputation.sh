@@ -52,4 +52,4 @@ do
 	totalWorkingHours=$((totalWorkingHours+1))
 	totalDays=$((totalDays+1))
 done
-[ $totalDays -eq 20 ] && echo "Wages for total working days "$wagesMonth || echo "Wages for total working time "$wagesTime 
+[ $totalDays -eq 20 ] && echo "Wages for total working days is "$wagesMonth || echo "Wages for total working time is "$wagesTime 
